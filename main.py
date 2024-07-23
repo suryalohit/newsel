@@ -26,7 +26,7 @@ driver.implicitly_wait(6)
 driver.get("https://www.cricbuzz.com/")
 time.sleep(5)
 print(driver.get_screenshot_as_base64())
-for i in range(10):
+for i in range(5):
   print(i)
   print(driver.title)
   time.sleep(2)
