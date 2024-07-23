@@ -166,15 +166,15 @@ for i in range(1):
                               
                         print("1.5.0")   
                         #annaon
-                        time.sleep(10)
                         print(driver.get_screenshot_as_base64())
                         WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.CSS_SELECTOR, 'input.r-30o5oe.r-1p0dtai.r-1pi2tsx.r-1d2f490.r-crgep1.r-t60dpp.r-u8s1d.r-zchlnj.r-ipm5af.r-13qz1uu.r-1ei5mc7'))).click()
                         #listen
+                        time.sleep(2)
                         print("1.5.1")  
                         WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.CSS_SELECTOR, 'button.css-175oi2r.r-1udnf30.r-1uusn97.r-h3s6tt.r-1udh08x.r-13qz1uu.r-1loqt21.r-o7ynqc.r-6416eg.r-1ny4l3l.r-105ug2t'))).click()
                         print("1.5.2")  
                         
-                        time.sleep(10)
+                        time.sleep(6)
                         results[spaceid]['url']=driver.wait_for_request('prod-fastly', timeout=12).url
                         
                         print("1.7")
