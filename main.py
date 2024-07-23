@@ -24,5 +24,10 @@ driver.set_page_load_timeout(90)
 # Load the URL and get the page source
 driver.implicitly_wait(6)
 driver.get("https://www.cricbuzz.com/")
-print(driver.title)
+for i in range(10):
+  print(i)
+  print(driver.title)
+  time.sleep(2)
+  
+
 # ...
