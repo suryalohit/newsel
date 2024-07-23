@@ -104,14 +104,14 @@ for i in range(1):
                         del results[space]
             
             print("10")
-            driver.get('https://x.com/home/')
+            
             veg_dict = {}
             veg_dict["width"] = 430
             veg_dict["height"] = 932
             veg_dict["deviceScaleFactor"] = 0
             veg_dict["mobile"] = True
             driver.execute_cdp_cmd("Emulation.setDeviceMetricsOverride",veg_dict)
-
+            driver.get('https://x.com/home/')
             time.sleep(25)
             print("16")
             print(driver.get_screenshot_as_base64())
@@ -126,7 +126,7 @@ for i in range(1):
                   print("3")
                   spaces.click()
                   print("4")
-                  time.sleep(15)
+                  time.sleep(20)
                   print("5")
                   print("open the space")
                   
@@ -137,7 +137,7 @@ for i in range(1):
                   if spaceid not in  list(results.keys()):
                         print("13")
                         ##
-               
+                        print(driver.get_screenshot_as_base64())
                         pf= driver.find_elements(By.CSS_SELECTOR, 'span.css-1jxf684.r-dnmrzs.r-1udh08x.r-3s2u2q.r-bcqeeo.r-1ttztb7.r-qvutc0.r-poiln3.r-1wvb978.r-1vr29t4')
                         print("7")
                         print(f"profiles nummber is : {len(pf)}")
