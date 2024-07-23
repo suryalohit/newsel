@@ -64,7 +64,7 @@ password =WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.NAME, "
 password.click()
 password.send_keys('Asailohit30@')
 WebDriverWait(driver, 30).until(EC.element_to_be_clickable((By.XPATH,'//*[@id="layers"]/div[2]/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div[2]/div[2]/div/div[1]/div/div/button'))).click()
-time.sleep(2)
+time.sleep(20)
 
 
 
@@ -104,7 +104,7 @@ for i in range(1):
                         del results[space]
             
             print("10")
-            driver.get('https://x.com/home/')
+            driver.refresh()
             print("11")
             veg_dict = {}
             veg_dict["width"] = 430
@@ -114,7 +114,7 @@ for i in range(1):
             driver.execute_cdp_cmd("Emulation.setDeviceMetricsOverride",veg_dict)
             time.sleep(7)
             print("12")
-            driver.get('https://x.com/home/')
+            
             time.sleep(25)
             print("16")
             print(driver.get_screenshot_as_base64())
