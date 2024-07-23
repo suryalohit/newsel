@@ -25,6 +25,7 @@ veg_dict["height"] = 932
 veg_dict["deviceScaleFactor"] = 0
 veg_dict["mobile"] = True
 driver.execute_cdp_cmd("Emulation.setDeviceMetricsOverride",veg_dict)
+driver.maximize_window()
 driver.set_page_load_timeout(90)
 
 # Load the URL and get the page source
