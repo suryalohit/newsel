@@ -23,7 +23,7 @@ options.add_argument('--disable-gpu')
 
 driver = webdriver.Chrome(options=options)
 
-driver.set_window_size(1100, 780)
+driver.set_window_size(1150, 780)
 driver.set_page_load_timeout(90)
 
 # Load the URL and get the page source
