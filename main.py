@@ -25,14 +25,14 @@ veg_dict["height"] = 932
 veg_dict["deviceScaleFactor"] = 0
 veg_dict["mobile"] = True
 driver.execute_cdp_cmd("Emulation.setDeviceMetricsOverride",veg_dict)
-driver.maximize_window()
+driver.set_window_size(600, 1000)
 driver.set_page_load_timeout(90)
 
 # Load the URL and get the page source
 driver.implicitly_wait(6)
 driver.get("https://www.cricbuzz.com/")
 time.sleep(5)
-print(driver.get_screenshot_as_png())
+print(driver.get_screenshot_as_base64())
 for i in range(5):
   print(i)
   print(driver.title)
