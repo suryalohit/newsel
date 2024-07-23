@@ -64,11 +64,22 @@ password =WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.NAME, "
 password.click()
 password.send_keys('Asailohit30@')
 WebDriverWait(driver, 30).until(EC.element_to_be_clickable((By.XPATH,'//*[@id="layers"]/div[2]/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div[2]/div[2]/div/div[1]/div/div/button'))).click()
-time.sleep(5)
-
+time.sleep(15)
 print("15")
 print(driver.get_screenshot_as_base64())
 print("login done")
+
+veg_dict = {}
+veg_dict["width"] = 430
+veg_dict["height"] = 932
+veg_dict["deviceScaleFactor"] = 0
+veg_dict["mobile"] = True
+driver.execute_cdp_cmd("Emulation.setDeviceMetricsOverride",veg_dict)
+
+time.sleep(15)
+print("16")
+print(driver.get_screenshot_as_base64())
+print("login done1")
   
 
 # ...
