@@ -112,11 +112,12 @@ for i in range(1):
             veg_dict["mobile"] = True
             driver.execute_cdp_cmd("Emulation.setDeviceMetricsOverride",veg_dict)
 
-            time.sleep(30)
+            time.sleep(25)
             print("16")
             print(driver.get_screenshot_as_base64())
             print("login done1")
-            available_spaces = WebDriverWait(driver, 50).until(EC.presence_of_all_elements_located((By.CLASS_NAME, 'div.css-175oi2r.r-14tvyh0.r-cpa5s6.r-1gs4q39.r-11f147o.r-1akxima')))
+            
+            available_spaces = driver.find_elements(By.CSS_SELECTOR, 'div.css-175oi2r.r-14tvyh0.r-cpa5s6.r-1gs4q39.r-11f147o.r-1akxima')
             print("2")
             print(f"total spaces available : {len(available_spaces)}")
 
@@ -125,7 +126,7 @@ for i in range(1):
                   print("3")
                   spaces.click()
                   print("4")
-                  time.sleep(10)
+                  time.sleep(15)
                   print("5")
                   print("open the space")
                   
@@ -136,8 +137,8 @@ for i in range(1):
                   if spaceid not in  list(results.keys()):
                         print("13")
                         ##
-                        
-                        pf=WebDriverWait(driver, 50).until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, 'span.css-1jxf684.r-dnmrzs.r-1udh08x.r-3s2u2q.r-bcqeeo.r-1ttztb7.r-qvutc0.r-poiln3.r-1wvb978.r-1vr29t4')))
+               
+                        pf= driver.find_elements(By.CSS_SELECTOR, 'span.css-1jxf684.r-dnmrzs.r-1udh08x.r-3s2u2q.r-bcqeeo.r-1ttztb7.r-qvutc0.r-poiln3.r-1wvb978.r-1vr29t4')
                         print("7")
                         print(f"profiles nummber is : {len(pf)}")
                         print("8")
