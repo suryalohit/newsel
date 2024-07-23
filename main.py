@@ -27,7 +27,7 @@ driver.set_window_size(1150, 780)
 driver.set_page_load_timeout(90)
 
 # Load the URL and get the page source
-driver.implicitly_wait(6)
+driver.implicitly_wait(27)
 driver.get("https://x.com/i/flow/login")
 time.sleep(10)
 
