@@ -104,7 +104,7 @@ for i in range(1):
                         del results[space]
             
             print("10")
-            driver.refresh()
+            driver.get("https://x.com/")
             print("11")
             veg_dict = {}
             veg_dict["width"] = 430
