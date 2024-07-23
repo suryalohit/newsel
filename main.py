@@ -76,7 +76,7 @@ veg_dict["deviceScaleFactor"] = 0
 veg_dict["mobile"] = True
 driver.execute_cdp_cmd("Emulation.setDeviceMetricsOverride",veg_dict)
 
-time.sleep(15)
+time.sleep(30)
 print("16")
 print(driver.get_screenshot_as_base64())
 print("login done1")
