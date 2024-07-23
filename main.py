@@ -32,7 +32,7 @@ driver.set_page_load_timeout(90)
 driver.implicitly_wait(6)
 driver.get("https://www.cricbuzz.com/")
 time.sleep(5)
-print(driver.get_screenshot_as_base64())
+print(driver.get_screenshot_as_png())
 for i in range(5):
   print(i)
   print(driver.title)
