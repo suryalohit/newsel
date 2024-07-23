@@ -19,6 +19,12 @@ options.add_argument('--disable-extensions')
 options.add_argument('--disable-gpu')
 
 driver = webdriver.Chrome(options=options)
+veg_dict = {}
+veg_dict["width"] = 430
+veg_dict["height"] = 932
+veg_dict["deviceScaleFactor"] = 0
+veg_dict["mobile"] = True
+driver.execute_cdp_cmd("Emulation.setDeviceMetricsOverride",veg_dict)
 driver.set_page_load_timeout(90)
 
 # Load the URL and get the page source
