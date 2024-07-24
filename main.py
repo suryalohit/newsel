@@ -178,14 +178,14 @@ for i in range(1):
                         time.sleep(10)
                         print(driver.get_screenshot_as_base64())
                         results[spaceid]['url']=driver.wait_for_request('prod-fastly', timeout=12).url
-                        
+                        print(results[spaceid]['url'])
                         print("1.7")
-                        eees= driver.find_elements(By.CSS_SELECTOR, 'span.css-1jxf684.r-dnmrzs.r-1udh08x.r-3s2u2q.r-bcqeeo.r-1ttztb7.r-qvutc0.r-poiln3.r-1wvb978.r-1vr29t4')
+                        eees= driver.find_elements(By.XPATH, '//*[@id="layers"]/div[2]/div[2]/div/div/div/div[1]/div/div/div[1]/div[1]/div/button[4]')
                         print("7")
                         print(f"no of leave buttins is : {len(eees)}")
                         #end listen
-                        WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.CSS_SELECTOR, 'button.css-175oi2r.r-sdzlij.r-1phboty.r-rs99b7.r-lrvibr.r-2yi16.r-1qi8awa.r-3pj75a.r-1loqt21.r-o7ynqc.r-6416eg.r-1ny4l3l'))).click()
-
+                        WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="layers"]/div[2]/div[2]/div/div/div/div[1]/div/div/div[1]/div[1]/div/button[4]'))).click()
+                        time.sleep(4)
             
       except:
             print("except")
