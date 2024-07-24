@@ -118,9 +118,7 @@ for i in range(1):
           
            
             print("login done1")
-            avp=driver.find_elements(By.CSS_SELECTOR,"[role='tablist']")
-            print(f"total spaces available : {len(avp)}")
-            
+          
             available_spaces = driver.find_elements(By.CSS_SELECTOR, 'div.css-175oi2r.r-14tvyh0.r-cpa5s6.r-1gs4q39.r-11f147o.r-1akxima')
             print("2")
             print(f"total spaces available : {len(available_spaces)}")
