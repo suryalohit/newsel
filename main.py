@@ -72,7 +72,7 @@ veg_dict["deviceScaleFactor"] = 0
 veg_dict["mobile"] = True
 driver.execute_cdp_cmd("Emulation.setDeviceMetricsOverride",veg_dict)
 
-
+driver.get("https://x.com/home")
 
 results={}
       #for i in range(1,10):
