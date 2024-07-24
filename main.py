@@ -113,6 +113,7 @@ for i in range(1):
             veg_dict["mobile"] = True
             driver.execute_cdp_cmd("Emulation.setDeviceMetricsOverride",veg_dict)
             time.sleep(7)
+            print(driver.get_screenshot_as_base64())
             print("12")
             driver.get("https://x.com/")
             time.sleep(25)
