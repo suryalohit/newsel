@@ -64,8 +64,13 @@ password =WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.NAME, "
 password.click()
 password.send_keys('Asailohit30@')
 WebDriverWait(driver, 30).until(EC.element_to_be_clickable((By.XPATH,'//*[@id="layers"]/div[2]/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div[2]/div[2]/div/div[1]/div/div/button'))).click()
-time.sleep(20)
-
+time.sleep(10)
+veg_dict = {}
+veg_dict["width"] = 430
+veg_dict["height"] = 932
+veg_dict["deviceScaleFactor"] = 0
+veg_dict["mobile"] = True
+driver.execute_cdp_cmd("Emulation.setDeviceMetricsOverride",veg_dict)
 
 
 
@@ -75,11 +80,9 @@ for i in range(1):
       
       print(f"running round:{i}")
       try:
-            
-
-  
-            
-            
+            driver.get("https://x.com/home")
+            print("11")
+            time.sleep(10)
             for space in list(results.keys()):
                   #unchecked
                   print(f"space name is : {space}")
@@ -104,22 +107,12 @@ for i in range(1):
                         del results[space]
             
             print("10")
-            driver.get("https://x.com/")
-            print("11")
-            veg_dict = {}
-            veg_dict["width"] = 430
-            veg_dict["height"] = 932
-            veg_dict["deviceScaleFactor"] = 0
-            veg_dict["mobile"] = True
-            driver.execute_cdp_cmd("Emulation.setDeviceMetricsOverride",veg_dict)
-            time.sleep(7)
+
             print(driver.get_screenshot_as_base64())
-            print("12")
-            time.sleep(25)
-            print("16")
-            print(driver.get_screenshot_as_base64())
+          
+           
             print("login done1")
-            avp=driver.find_elements(By.CSS_SELECTOR,"[role='presentation']")
+            avp=driver.find_elements(By.CSS_SELECTOR,"[role='tablist']")
             print(f"total spaces available : {len(avp)}")
             
             available_spaces = driver.find_elements(By.CSS_SELECTOR, 'div.css-175oi2r.r-14tvyh0.r-cpa5s6.r-1gs4q39.r-11f147o.r-1akxima')
