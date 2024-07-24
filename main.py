@@ -60,9 +60,14 @@ except:
 
 print("3")
 print(driver.get_screenshot_as_base64())
+
 password =WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.NAME, "password")))
+
+print("3.1")
 password.click()
+print("3.2")
 password.send_keys('Asailohit30@')
+print("3,5")
 WebDriverWait(driver, 30).until(EC.element_to_be_clickable((By.XPATH,'//*[@id="layers"]/div[2]/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div[2]/div[2]/div/div[1]/div/div/button'))).click()
 time.sleep(10)
 veg_dict = {}
