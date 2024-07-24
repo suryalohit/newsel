@@ -70,24 +70,25 @@ password.send_keys('Asailohit30@')
 print("3,5")
 WebDriverWait(driver, 30).until(EC.element_to_be_clickable((By.XPATH,'//*[@id="layers"]/div[2]/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div[2]/div[2]/div/div[1]/div/div/button'))).click()
 time.sleep(10)
-veg_dict = {}
-veg_dict["width"] = 430
-veg_dict["height"] = 932
-veg_dict["deviceScaleFactor"] = 0
-veg_dict["mobile"] = True
-driver.execute_cdp_cmd("Emulation.setDeviceMetricsOverride",veg_dict)
+
 
 driver.get("https://x.com/home")
 
 results={}
       #for i in range(1,10):
 for i in range(1):
+      veg_dict = {}
+      veg_dict["width"] = 430
+      veg_dict["height"] = 932
+      veg_dict["deviceScaleFactor"] = 0
+      veg_dict["mobile"] = True
+      driver.execute_cdp_cmd("Emulation.setDeviceMetricsOverride",veg_dict)
       
       print(f"running round:{i}")
       try:
             driver.get("https://x.com/home")
             print("11")
-            time.sleep(10)
+            time.sleep(15)
             for space in list(results.keys()):
                   #unchecked
                   print(f"space name is : {space}")
