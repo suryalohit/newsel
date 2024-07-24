@@ -171,10 +171,11 @@ for i in range(1):
                         #listen
                         time.sleep(2)
                         print("1.5.1")  
+                        print(driver.get_screenshot_as_base64())
                         WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.CSS_SELECTOR, 'button.css-175oi2r.r-1udnf30.r-1uusn97.r-h3s6tt.r-1udh08x.r-13qz1uu.r-1loqt21.r-o7ynqc.r-6416eg.r-1ny4l3l.r-105ug2t'))).click()
                         print("1.5.2")  
                         
-                        time.sleep(13)
+                        time.sleep(10)
                         print(driver.get_screenshot_as_base64())
                         results[spaceid]['url']=driver.wait_for_request('prod-fastly', timeout=12).url
                         
